@@ -26,7 +26,7 @@ navegador = webdriver.Chrome(service=servico)
 navegador.maximize_window()
 
 
-navegador.get("https://servicos.upvix.com.br") 
+navegador.get("https://site-da-empresa.com") 
 
 print("--- ATENÇÃO ---")
 print(f"O bot vai processar APENAS itens com a sigla: '{FILTRO_UNIDADE}'")
