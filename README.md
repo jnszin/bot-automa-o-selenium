@@ -43,7 +43,7 @@ A automação elimina erros humanos de digitação, padroniza os dados e reduz d
 
 ```bash
 # Clone este repositório
-git clone [https://github.com/SEU-USUARIO/bot-inventario-selenium.git](https://github.com/SEU-USUARIO/bot-inventario-selenium.git)
+git clone https://github.com/jnszin/bot-automa-o-selenium.git
 
 # Instale as dependências
 pip install -r requirements.txt
