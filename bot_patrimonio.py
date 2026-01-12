@@ -7,15 +7,10 @@ from selenium.webdriver.support.ui import Select
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
-
 ITENS_JA_FEITOS = 00
-
-
 FILTRO_UNIDADE = "JP" 
 
-
 scope = ["https://spreadsheets.google.com/feeds", 'https://www.googleapis.com/auth/drive']
-# Caminho das credenciais (verifique se o arquivo está nessa pasta mesmo)
 creds = ServiceAccountCredentials.from_json_keyfile_name(r'c:\Projeto Python\credenciais.json', scope)
 client = gspread.authorize(creds)
 
@@ -89,9 +84,7 @@ for i, linha in enumerate(dados):
 
 
         preencher('/html/body/div[2]/div/div/div[3]/div/div[2]/div/div[1]/input', nome_prod)
-
         preencher('/html/body/div[2]/div/div/div[3]/div/div[2]/div/div[2]/div[1]/input', patrimonio)
-        # Local, Marca, Modelo
         preencher('/html/body/div[2]/div/div/div[3]/div/div[2]/div/div[2]/div[2]/input', local)
         preencher('/html/body/div[2]/div/div/div[3]/div/div[3]/div/div[1]/input', marca)
         preencher('/html/body/div[2]/div/div/div[3]/div/div[3]/div/div[2]/input', modelo)
@@ -101,7 +94,7 @@ for i, linha in enumerate(dados):
             elemento = navegador.find_element(By.XPATH, xpath_status)
             selecao = Select(elemento)
 
-            palavra_chave = "estoque" # Padrão
+            palavra_chave = "estoque" 
             if "uso" in estado_planilha: palavra_chave = "uso"
             elif "reparo" in estado_planilha: palavra_chave = "reparo"
             elif "baixado" in estado_planilha or "descartado" in estado_planilha: palavra_chave = "baixado"
@@ -122,7 +115,7 @@ for i, linha in enumerate(dados):
 
         try:
             navegador.find_element(By.XPATH, "//button[contains(., 'Salvar')]").click()
-            time.sleep(3) # Tempo para salvar
+            time.sleep(3)
         except:
             print("Erro ao clicar em Salvar.")
 
