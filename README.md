@@ -67,6 +67,24 @@ Durante o desenvolvimento, enfrentei desafios como a sincronia do carregamento d
 
 ---
 
+## 🔧 Customização para outros projetos
+
+Este bot foi configurado para um sistema específico (ERP legado). Para utilizá-lo em outro site, você precisará ajustar:
+
+1.  **URL do Sistema:** Altere `navegador.get(...)` para o link do seu sistema alvo.
+2.  **Mapeamento de XPaths:** Atualize os seletores nas funções `find_element` para corresponder aos botões e campos do seu site.
+3.  **Lógica de Negócio:** Ajuste as regras de validação (ex: nomes de colunas da planilha) conforme sua necessidade.
+
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **Jonas Alves Pacheco**.
+
+Entre em contato! 👇
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/jonas-alves-pacheco-761944302/)
+
 **Desenvolvido por Jonas Alves Pacheco**
 
 ```
